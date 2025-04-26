@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>My First Page</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+
+<body>
+    <nav class="container">
+        <ul>
+            <li><a href="../index.html">
+                    <h2 class="home">Home</h2>
+                </a></li>
+            <li>
+                <a href="../pages/honda.html" target="_blank">
+                    <h2 class="honda">Honda</h2>
+                    <img src="../images/honda.jpg" alt="Honda" title="Honda" width="100" height="50">
+            </li>
+            <li>
+                <a href="../pages/kawasaki.html" target="_blank">
+                    <h2 class="kawasaki">Kawasaki</h2>
+                    <img src="../images/Kawasaki.png" alt="Kawasaki" title="Kawasaki" width="100" height="50">
+                </a>
+            </li>
+            <li>
+                <a href="../pages/ktm.html" target="_blank">
+                    <h2 class="ktm">KTM</h2>
+                    <img src="../images/ktm.png" alt="KTM" title="KTM" width="100" height="50">
+                </a>
+            </li>
+            <li>
+                <a href="../pages/suzuki.html" target="_blank">
+                    <h2 class="suzuki">Suzuki</h2>
+                    <img src="../images/suzuki.jpg" alt="Suzuki" title="Suzuki" width="100" height="50">
+                </a>
+            </li>
+            <li>
+                <h2 class="form">Анкета</h2>
+                <img src="../images/anketa.png" alt="Suzuki" title="Suzuki" width="100" height="50">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <hr />
+    <h3 class="form">Анкета</h3>
+    <form class="myform">
+        <fieldset class="contactinfo">
+            <legend>Контактна інформація</legend>
+            <label for="surname">Прізвище:</label>
+            <br />
+            <input class="surname" type="text" id="surname" name="surname">
+            <br /><br />
+            <label for="name">Ім'я:</label>
+            <br />
+            <input type="text" id="name" name="name">
+            <label for="date">Дата народження:</label>
+            <input type="date" id="date"
+                name="birthday"><!--Не зрозумів чому на сторінці показує російською мовою дд.мм.гггг-->
+            <br /><br />
+            <label for="email">Пошта:</label>
+            <br />
+            <input type="email" id="email" name="email">
+            <br /><br />
+            <label for="number"></label>
+            <input type="number" id="number" name="number" min="1" max="10">
+        </fieldset>
+        <fieldset class="gender">
+            <legend>Стать:</legend>
+            <input type="radio" name="gender" value="male">Чоловік
+            <input type="radio" name="gender" value="male">Жінка
+        </fieldset>
+        <label class="typeofmoto" for="type">На яких мотоциклах катаєте:</label>
+        <select id="type" name="motorcycle">
+            <option value="sport">Спортивні</option>
+            <option value="chopper">Чопери</option>
+            <option value="bobber">Бобери</option>
+            <option value="enduro">Ендуро</option>
+            <option value="cross">Кросові</option>
+        </select>
+        <fieldset class="equipment">
+            <legend>В чому катаєте:</legend>
+            <input type="checkbox" name="equipment" value="yes">Шолом
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Мотоботи
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Черепаха
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Комбінезон
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Перчатки
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Куртка
+            <br />
+            <input type="checkbox" name="equipment" value="yes">Штані
+        </fieldset>
+        <label class="coment" for="message">Ваш коментар:</label>
+        <textarea class="textarea" id="message" name="message" rows="4" cols="50"></textarea>
+        <button class="reset" type="reset">Скинути</button>
+        <input class="submit" type="submit" value="Надіслати">
+    </form>
+</body>
+
+</html>
