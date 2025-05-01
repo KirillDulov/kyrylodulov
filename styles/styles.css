@@ -1,9 +1,15 @@
-body {
+.table {
+    margin: 0 auto;
+    width: 900px;
+    height: 800px;
+}
+/*body {
     margin: 0;
 }
 
 hr {
     margin: 0;
+    padding-bottom: 10px;
 }
 
 p {
@@ -21,8 +27,8 @@ h3 {
     margin: 0;
     text-align: center;
     font-size: 30px;
-}*/
-
+}
+*/
 ul {
     margin: 0;
     padding: 0;
@@ -42,7 +48,7 @@ ul {
     padding: 10px;
 }
 
-.home {
+/*.home {
     color: blue;
 
 }
@@ -163,6 +169,7 @@ li {
     padding: 10px;
     color: aliceblue;
 }
+
 h1 {
 
     background-color: aqua;
@@ -192,7 +199,7 @@ h1 {
     background-color: rgb(50, 150, 45);
 }
 
-.test4 + .test5 {
+.test4+.test5 {
     width: 300px;
     background-color: yellow;
 }
@@ -210,4 +217,4 @@ a[href="https://www.google.com/"] {
 p.test9 {
     width: 300px;
     background-color: rgb(67, 146, 113);
-}
+}*/
