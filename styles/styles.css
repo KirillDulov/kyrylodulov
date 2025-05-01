@@ -2,7 +2,67 @@
     margin: 0 auto;
     width: 900px;
     height: 800px;
+    border-spacing: 0px;
+
 }
+
+.yellow,
+.yellow1,
+.yellow2 {
+    background-color: yellow;
+    color: yellow;
+}
+
+.red,
+.red1 {
+    background-color: red;
+    color: red;
+}
+
+.black,
+.black1 {
+    background-color: black;
+    color: black;
+}
+
+.blue {
+    background-color: blue;
+    color: blue;
+}
+
+.kom16,
+.red1 {
+    width: 40px;
+}
+
+.kom2,
+.kom4,
+.yellow1 {
+    width: 70px;
+}
+
+.red {
+    height: 170px;
+
+}
+
+.yellow2 {
+    height: 100px;
+}
+
+.kom1 {
+    height: 60px;
+}
+
+.kom81 {
+    height: 50px;
+}
+
+td {
+    border: 7px solid black;
+    color: white;
+}
+
 /*body {
     margin: 0;
 }
