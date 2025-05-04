@@ -63,7 +63,7 @@ td {
     color: white;
 }
 
-/*body {
+body {
     margin: 0;
 }
 
@@ -81,6 +81,7 @@ h2 {
     margin: 0;
     font-family: "ink free";
     font-size: x-large;
+
 }
 
 h3 {
@@ -88,12 +89,12 @@ h3 {
     text-align: center;
     font-size: 30px;
 }
-*/
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
+    display: inline-flex;
 }
 
 
@@ -104,11 +105,47 @@ ul {
     margin-right: auto;
     margin-bottom: 10px;
     margin-top: 10px;
-
     padding: 10px;
+  
 }
 
-/*.home {
+.container1{
+    background-color: red;
+    width: 500px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 20px;
+    overflow-y: scroll;
+    
+
+}
+.container2{ 
+    background-color: aquamarine;
+    width: 700px;
+    height: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    overflow: hidden;
+}
+.wrapper {
+    
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+}
+.span {
+    background-color: blueviolet;
+    display: block;
+}
+.span1 { background-color: brown;
+
+}
+.inline {
+    background-color: burlywood;
+    display: inline;
+}
+.home {
     color: blue;
 
 }
@@ -140,6 +177,7 @@ ul {
 
 li {
     margin-left: 40px;
+    display: inline-block;
 }
 
 .myform {
@@ -277,4 +315,4 @@ a[href="https://www.google.com/"] {
 p.test9 {
     width: 300px;
     background-color: rgb(67, 146, 113);
-}*/
+}
