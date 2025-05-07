@@ -106,20 +106,21 @@ ul {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 10px;
-  
+
 }
 
-.container1{
+.container1 {
     background-color: red;
     width: 500px;
     height: 300px;
     margin: 10px auto;
     padding: 20px;
     overflow-y: scroll;
-    
+
 
 }
-.container2{ 
+
+.container2 {
     background-color: aquamarine;
     width: 700px;
     height: 500px;
@@ -127,24 +128,30 @@ ul {
     padding: 20px;
     overflow: hidden;
 }
+
 .wrapper {
-    
+
     width: 200px;
     height: 50px;
     position: relative;
     top: 50px;
 }
+
 .span {
     background-color: blueviolet;
     display: block;
 }
-.span1 { background-color: brown;
+
+.span1 {
+    background-color: brown;
 
 }
+
 .inline {
     background-color: burlywood;
     display: inline;
 }
+
 .home {
     color: blue;
 
@@ -315,4 +322,102 @@ a[href="https://www.google.com/"] {
 p.test9 {
     width: 300px;
     background-color: rgb(67, 146, 113);
+}
+
+/*homework8*/
+.flex-container {
+    background-color: rgb(179, 155, 201);
+    width: auto;
+    height: 50px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+
+}
+
+.flex-element {
+    background-color: aquamarine;
+    width: 100px;
+    height: 50px;
+    margin-right: auto;
+}
+
+.flex-element1 {
+    background-color: aqua;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.flex-element2 {
+    background-color: aqua;
+    width: 100px;
+    height: 50px;
+
+}
+
+.flex-element3 {
+    background-color: aqua;
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.flex-element11 {
+    background-color: aquamarine;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.flex-element12 {
+    background-color: aqua;
+    width: 100px;
+    height: 50px;
+    margin-right: auto;
+}
+
+.flex-container1 {
+    background-color: rgb(179, 155, 201);
+    width: auto;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end
+}
+
+.flex-element14 {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+
+}
+
+.flex-element15 {
+    background-color: aqua;
+    width: 100px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.flex-element16 {
+    background-color: aqua;
+    width: 100px;
+    height: 45px;
+}
+
+.flex-container2 {
+    display: block;
+}
+
+.flex-container3 {
+    background-color: rgb(179, 155, 201);
+    width: auto;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center
 }
