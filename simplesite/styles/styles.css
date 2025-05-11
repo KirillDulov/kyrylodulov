@@ -1,0 +1,186 @@
+.container {
+    overflow: hidden;
+    
+}
+
+.content {
+    width: 1110px;
+    margin: 0 auto;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #34547A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 164%;
+}
+
+header.container {
+    background-color: #EEEFF1;
+}
+
+.design-layout.container,
+.way-of-work.container {
+    background-color: #EEEFF1;
+
+}
+
+.projects.container,
+footer.container {
+    background-color: #34547A;
+
+}
+
+.menu.content {
+    padding-top: 79px;
+    padding-bottom: 81px;
+}
+
+.menu__nav {}
+
+.menu__items {
+    display: flex;
+    gap: 45px;
+
+}
+
+.menu__item {
+    letter-spacing: 1, 6px;
+    color: black;
+
+}
+
+.design-layout.content {
+
+    padding-bottom: 141px;
+}
+
+.design-layout__title {
+    padding-top: 81px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 48px;
+    width: 541px;
+    height: 45px;
+
+}
+
+.design-layout__text {
+    padding-top: 60px;
+    padding-bottom: 65px;
+    width: 540px;
+    line-height: 164%;
+    color: #727272;
+}
+
+.design-layout__cta {
+    font-size: 16px;
+    line-height: 164%;
+    letter-spacing: 1, 6px;
+    border: none;
+    background-color: #34547A;
+    color: white;
+    outline: none;
+    padding: 24.5px 50.66px;
+
+}
+
+.about-me.container {
+    background-color: #f9f9f9;
+
+}
+
+.about-me.content {
+    padding-bottom: 100px;
+
+}
+
+.about-me__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-top: 112px;
+
+}
+
+.about-me__text {
+    line-height: 164%;
+    width: 540px;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    margin: 0 auto;
+    color: #727272;
+
+}
+
+img {
+    width: 141px;
+
+}
+
+.projects.container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.projects.content {
+    display: flex;
+    gap: 49px;
+
+}
+
+.way-of-work__title {
+    padding-top: 100px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+
+}
+
+.way-of-work__text {
+    width: 540px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #727272;
+}
+
+.rectangle {
+    width: 1110px;
+    height: 600px;
+    padding-top: 57px;
+    padding-bottom: 100px;
+
+}
+
+.footer__text {
+    padding-top: 50px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+.footer__text1 {
+    font-size: 13px;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+
+}
