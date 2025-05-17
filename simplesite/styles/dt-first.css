@@ -1,0 +1,183 @@
+@media (max-width: 1126px) {
+    .content {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .menu.content {
+        padding-top: 39px;
+        padding-bottom: 40px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    .design-layout__title {
+        padding-top: 40px;
+        font-size: 42px;
+    }
+
+    .design-layout__text {
+        font-size: 14px;
+    }
+
+    .design-layout__cta {
+        font-size: 14px;
+        padding: 18px 35px;
+    }
+
+    .design-layout.content {
+        padding-bottom: 79px;
+    }
+
+    .about-me__title {
+        font-size: 26px;
+        padding-top: 66px;
+    }
+
+    .about-me__text {
+        width: 540px;
+        padding-top: 25px;
+        font-size: 14px;
+    }
+
+    .about-me.content {
+        padding-bottom: 50px;
+    }
+
+    .projects.container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .projects__img {
+        width: 117px;
+        height: 38px;
+    }
+
+    .way-of-work__title {
+        padding-top: 50px;
+        font-size: 26px;
+
+    }
+
+    .rectangle {
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
+
+    .footer__text {
+        padding-top: 30px;
+        font-size: 19px;
+        padding-bottom: 10px;
+    }
+
+    .way-of-work__text {
+        padding-top: 35px;
+        font-size: 14px;
+
+    }
+
+    .footer__text1 {
+        font-size: 11px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 783px) {
+    .content {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .menu.content {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+
+    a {
+        font-size: 9px;
+    }
+
+    .design-layout__title {
+        padding-top: 11px;
+        font-size: 23px;
+        width: 100%;
+    }
+
+    .design-layout__text {
+        font-size: 7px;
+        padding-top: 23px;
+        padding-bottom: 34px;
+        width: 100%;
+    }
+
+    .design-layout__cta {
+        font-size: 8px;
+        padding: 6px 15px;
+    }
+
+    .design-layout.content {
+        padding-bottom: 39px;
+    }
+
+    .about-me__title {
+        font-size: 23px;
+        padding-top: 33px;
+        width: 100%;
+    }
+
+    .about-me__text {
+        width: 85%;
+        padding-top: 19px;
+        font-size: 7px;
+    }
+
+    .about-me.content {
+        padding-bottom: 25px;
+    }
+
+    .projects.container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .projects__img {
+        width: 50px;
+        height: 20px;
+    }
+
+    .way-of-work__title {
+        padding-top: 25px;
+        font-size: 23px;
+
+    }
+
+    .rectangle {
+        padding-top: 17px;
+        padding-bottom: 20px;
+        width: 95%;
+        height: 300px;
+    }
+
+    .footer__text {
+        padding-top: 15px;
+        font-size: 7px;
+        padding-bottom: 10px;
+    }
+
+    .way-of-work__text {
+        padding-top: 15px;
+        font-size: 7px;
+        width: 85%;
+        line-height: 1.6;
+
+    }
+
+    .footer__text1 {
+        font-size: 5px;
+        padding-bottom: 10px;
+    }
+}
+
