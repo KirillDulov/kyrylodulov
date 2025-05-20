@@ -1,0 +1,193 @@
+header.container,
+.design-layout.container,
+.way-of-work.container {
+    background-color: #EEEFF1;
+}
+
+.projects.container,
+footer.container {
+    background-color: $backgroundcolor;
+}
+
+.menu {
+    padding: {
+        top: 79px;
+        bottom: 81px;
+    }
+
+    @media (max-width: 1126px) {
+        padding: {
+            top: 39px;
+            bottom: 40px;
+        }
+    }
+
+    @media (max-width: 783px) {
+        tpadding: {
+            top: 19px;
+            bottom: 19px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 45px;
+    }
+
+    &__item {
+        letter-spacing: 1, 6px;
+    }
+}
+
+.design-layout {
+    .content {
+        padding: {
+            bottom: 141px;
+        }
+    }
+
+    &__title {
+        padding: {
+            top: 81px;
+        }
+
+        font-weight: $fontWeight;
+        font-size: 48px;
+        width: 541px;
+        height: 45px;
+    }
+
+    &__text {
+        padding: {
+            top: 60px;
+            bottom: 65px;
+        }
+
+        width: $textwidth;
+        line-height: $mainlineHeight;
+        color: $maintextColor;
+    }
+
+    &__cta {
+        font-size: 16px;
+        line-height: $mainlineHeight;
+        letter-spacing: 1, 6px;
+        border: none;
+        background-color: $backgroundcolor;
+        color: white;
+        outline: none;
+        padding: 24.5px 50.66px;
+    }
+}
+
+.about-me {
+    .container {
+        background-color: #f9f9f9;
+    }
+
+    .content {
+        padding: {
+            bottom: 100px;
+        }
+    }
+
+    &__title {
+        font-weight: $fontWeight;
+        font-size: $titlefontsize;
+        line-height: $lineHeight;
+        text-align: $textalign;
+
+        padding: {
+            top: 112px;
+        }
+    }
+
+    &__text {
+        line-height: $mainlineHeight;
+        text-align: $textalign;
+        width: 100%;
+        margin: 0 auto;
+        color: $maintextColor;
+
+        padding: {
+            top: 50px;
+        }
+    }
+}
+
+.projects {
+    .content {
+        display: flex;
+        gap: 3%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__img {
+        width: 141px;
+        height: 50px;
+
+    }
+}
+
+.way-of-work {
+    .content wow {
+        width: 100%;
+    }
+
+    &__title {
+        padding: {
+            top: 100px;
+        }
+
+        font-weight: $fontWeight;
+        font-size: $titlefontsize;
+        line-height: $lineHeight;
+        text-align: $textalign;
+    }
+
+    &__text {
+        width: $textwidth;
+        text-align: $textalign;
+        margin: 0 auto;
+
+        padding: {
+            top: 50px;
+        }
+
+        color: $maintextColor;
+    }
+}
+
+.rectangle {
+    width: 100%;
+    height: 600px;
+
+    padding: {
+        top: 57px;
+        bottom: 100px;
+    }
+}
+
+.footer {
+    &__text {
+        padding: {
+            top: 50px;
+            bottom: 20px;
+        }
+
+        font-weight: $fontWeight;
+        @include fontsize(21px);
+        line-height: $lineHeight;
+        color: $footertextcolor;
+    }
+
+    &__text1 {
+        @include fontsize(13px);
+        color: $footertextcolor;
+
+        padding: {
+            bottom: 50px;
+        }
+    }
+}

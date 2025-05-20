@@ -1,0 +1,242 @@
+@media (max-width: 1126px) {
+    .design-layout {
+        .content {
+            padding: {
+                bottom: 79px;
+            }
+        }
+
+        &__title {
+            padding: {
+                top: 40px;
+            }
+
+            font-size: 42px;
+        }
+
+        &__text {
+            font-size: $fontSize;
+        }
+
+        &__cta {
+            font-size: $fontSize;
+            padding: 18px 35px;
+        }
+    }
+
+    .about-me {
+        .content {
+            padding: {
+                bottom: 50px;
+            }
+        }
+
+        &__title {
+            font-size: 26px;
+
+            padding: {
+                top: 66px;
+            }
+        }
+
+        &__text {
+            width: $textwidth;
+
+            padding: {
+                top: 25px;
+            }
+
+            font-size: $fontSize;
+        }
+    }
+
+    .projects {
+
+        .content {
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+        }
+
+        &__img {
+            width: 117px;
+            height: 38px;
+        }
+
+        &__title {
+            padding: {
+                top: 50px;
+            }
+
+            font-size: 26px;
+
+        }
+    }
+
+    .way-of-work {
+        &__text {
+            padding: {
+                top: 35px;
+            }
+
+            font-size: $fontSize;
+        }
+    }
+
+    .rectangle {
+        padding: {
+            top: 45px;
+            bottom: 60px;
+        }
+    }
+
+    .footer {
+        &__text {
+            padding: {
+                top: 30px;
+                bottom: 10px;
+            }
+
+            font-size: 19px;
+
+        }
+
+        &__text1 {
+            font-size: 11px;
+
+            padding: {
+                bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 783px) {
+    a {
+        font-size: 9px;
+    }
+
+    .design-layout {
+        .content {
+            padding: {
+                bottom: 39px;
+            }
+        }
+
+        &__title {
+            padding: {
+                top: 11px;
+            }
+
+            font-size: 23px;
+            width: 100%;
+        }
+
+        &__text {
+            padding: {
+                top: 23px;
+                bottom: 34px;
+            }
+
+            width: 100%;
+            font-size: 7px;
+        }
+
+        &__cta {
+            font-size: 8px;
+            padding: 6px 15px;
+        }
+    }
+
+    .about-me {
+        .content {
+            padding: {
+                bottom: 25px;
+            }
+        }
+
+        &__title {
+            font-size: 23px;
+            width: 100%;
+
+            padding: {
+                top: 33px;
+            }
+        }
+
+        &__text {
+            width: 85%;
+            font-size: 7px;
+
+            padding: {
+                top: 19px;
+            }
+        }
+    }
+
+    .projects {
+        .content {
+            padding: {
+                top: 25px;
+                bottom: 25px;
+            }
+
+            gap: 3%;
+        }
+
+        &__img {
+            width: 50px;
+            height: 20px;
+        }
+    }
+
+    .way-of-work {
+        &__title {
+            padding: {
+                top: 25px;
+            }
+
+            font-size: 23px;
+        }
+
+        &__text {
+            padding: {
+                top: 15px;
+            }
+
+            font-size: 7px;
+            width: 85%;
+            line-height: 1.6;
+        }
+    }
+
+    .rectangle {
+        padding: {
+            top: 17px;
+            bottom: 20px;
+        }
+
+        width: 95%;
+        height: 300px;
+    }
+
+    .footer {
+        &__text {
+            padding: {
+                top: 15px;
+                bottom: 10px;
+            }
+
+            font-size: 7px;
+        }
+
+        &__text1 {
+            font-size: 5px;
+
+            padding: {
+                bottom: 10px;
+            }
+        }
+    }
+}
