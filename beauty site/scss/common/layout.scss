@@ -1,0 +1,15 @@
+.content {
+    width: 1110px;
+    margin: 0 auto;
+    align-items: center;
+
+    @media (max-width: 1126px) {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 783px) {
+        width: 360px;
+        margin: 0 auto;
+    }
+}

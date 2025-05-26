@@ -1,0 +1,1042 @@
+@media (max-width: 1126px) {
+
+    .content.menu {
+        .menu {
+            &__item {
+
+                .item {
+                    &__items {
+                        font-size: 12px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .container.header {
+
+        .content.header {
+
+            .header {
+                &__picture {
+                    width: 200px;
+                    height: 60px;
+
+                    padding: {
+                        top: 10px;
+                        bottom: 10px;
+                    }
+                }
+
+                &__text {
+                    width: 127px;
+                    height: 19px;
+                    font-size: 14px;
+
+                    padding: {
+                        top: 30px;
+                        bottom: 31px;
+                    }
+                }
+
+                &__button {
+                    padding: {
+                        top: 25px;
+                        bottom: 25px;
+                        left: 25px;
+                    }
+
+                    .button {
+                        &__cta {
+                            width: 140px;
+                            height: 30px;
+                            font-size: 12px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content.sub-menu {
+
+        .sub-menu {
+
+            &__item {
+                gap: 20px;
+
+                padding: {
+                    top: 11px;
+                    bottom: 12px;
+                }
+
+                .item {
+                    &__items {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container.superchair {
+        width: 100%;
+        height: 365px;
+
+        .content.superchair {
+
+            .superchair {
+                &__tittle {
+                    width: 200px;
+                    height: 36px;
+                    padding-top: 88px;
+                    font-weight: 600;
+                    font-size: 36px;
+                }
+
+                &__text {
+                    padding-top: 25px;
+                    padding-bottom: 35px;
+                    width: 217px;
+                    height: 30px;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                &__button {
+                    width: 150px;
+                    height: 30px;
+
+                    .button {
+                        &__chair {
+                            width: 117px;
+                            height: 15px;
+                            font-size: 12px;
+                            padding-top: 8px;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+
+                &__circle1 {
+                    width: 500px;
+                    height: 500px;
+                    margin: -319px 236px;
+                }
+
+                &__circle {
+                    width: 400px;
+                    height: 400px;
+                    margin: -448px 285px;
+                }
+
+                &__chair2 {
+                    width: 200px;
+                    height: 300px;
+                    margin: 81px 379px;
+                }
+            }
+        }
+    }
+
+    .content.offers {
+
+        .offers {
+            &__tittle {
+                width: 275px;
+                height: 29px;
+                font-weight: 700;
+                font-size: 24px;
+                color: $secondtextcolor;
+            }
+
+            &__tittle {
+                width: 150px;
+                height: 29px;
+                padding-top: 40px;
+                padding-bottom: 28px;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 100%;
+            }
+
+            &__buy {
+                display: flex;
+                gap: 25px;
+
+                .buy {
+                    &__chair {
+                        width: 170px;
+                        height: 278px;
+
+                        .chair {
+                            &__img {
+                                width: 100px;
+                                height: 141px;
+                                padding-left: 34px;
+                                padding-top: 20px;
+                            }
+
+                            &__text {
+                                width: 140px;
+                                height: 25px;
+                                font-size: 12px;
+                                line-height: 121%;
+                                padding-top: 10px;
+                                padding-left: 15px;
+                                padding-bottom: 15px;
+                            }
+
+                            &__textpay {
+                                width: 50px;
+                                height: 10px;
+                                font-weight: 400;
+                                font-size: 19px;
+                                padding-left: 61px;
+                                padding-bottom: 15px;
+                            }
+
+                            &__button {
+                                width: 115px;
+                                height: 25px;
+                                margin-left: 29px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content.cta {
+        gap: 20px;
+
+        .cta {
+            &__gifts {
+                width: 370px;
+                height: 150px;
+                margin: 50px auto;
+
+                .gifts {
+
+                    &__description {
+
+                        .description {
+
+                            &__tittle {
+                                width: 210px;
+                                height: 17px;
+                                font-weight: 600;
+                                font-size: 16px;
+                                padding-top: 25px;
+                                padding-left: 30px;
+                            }
+
+                            &__text {
+                                width: 129px;
+                                height: 40px;
+                                font-size: 12px;
+                                padding-left: 30px;
+                                padding-top: 15px;
+                            }
+
+                            &__form {
+                                width: 216px;
+                                height: 35px;
+
+                                padding-left: 30px;
+                                padding-top: 10px;
+
+                                .form {
+
+                                    &__email {
+                                        width: 190px;
+                                        height: 25px;
+                                        font-weight: 300;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__img {
+
+                        .img {
+
+                            &__picture {
+                                width: 100px;
+                                height: 84.54px;
+                                padding-top: 39.73px;
+                                padding-left: 0px;
+                                padding-right: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &__visitus {
+                display: flex;
+                background-color: $secondbackgroundcolor;
+                width: 360px;
+                height: 150px;
+                margin: 50px auto;
+
+                .description {
+                    &__tittle {
+                        width: 180px;
+                        height: 17px;
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding-top: 25px;
+                        padding-left: 30px;
+                    }
+
+                    &__text {
+                        width: 129px;
+                        height: 40px;
+                        font-size: 12px;
+                        padding-left: 30px;
+                        padding-top: 15px;
+                    }
+
+                    &__button {
+                        width: 150px;
+                        height: 25px;
+                        margin-left: 30px;
+                        margin-top: 10px;
+                        font-size: 12px;
+                        margin-right: 1px;
+                    }
+                }
+
+                .img {
+                    &__picture1 {
+                        width: 136.67px;
+                        height: 70px;
+                        padding-top: 46px;
+                        padding-right: 0.33px;
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .impuls {
+        width: 768px;
+        height: 275px;
+
+        &__table {
+            width: 765px;
+            height: 275px;
+            border-spacing: 1px;
+            border-color: $backgroundcolor;
+
+            .row {
+                &__img {
+                    width: 100px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+    .content.offers1 {
+
+        .offers1 {
+            &__tittle {
+                width: 255px;
+                height: 25px;
+                font-weight: 600;
+                font-size: 20px;
+                padding-top: 40px;
+                padding-bottom: 18px;
+            }
+
+            &__buy1 {
+                display: flex;
+                gap: 30px;
+
+                .buy1 {
+                    &__chair1 {
+                        width: 169px;
+                        height: 278px;
+                        background: white;
+                        margin-bottom: 60px;
+
+                        .chair1 {
+                            &__img {
+                                width: 90px;
+                                height: 125px;
+                                padding-left: 39px;
+                                padding-top: 20px;
+                            }
+
+                            &__text {
+                                width: 145px;
+                                height: 25px;
+                                font-size: 12px;
+                                padding-top: 10px;
+                                padding-left: 15px;
+                                padding-bottom: 15px;
+                            }
+
+                            &__textpay {
+                                width: 60px;
+                                height: 10px;
+                                text-align: center;
+                                font-size: 19px;
+                                padding-left: 57px;
+                                padding-bottom: 22px;
+                            }
+
+                            &__button {
+                                width: 100px;
+                                height: 30px;
+                                border: none;
+                                margin-left: 36px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container.nav {
+        background-color: $maintextcolor;
+        border-bottom: 1px solid $backgroundcolor;
+
+        .content.nav {
+
+            .nav {
+
+                &__categories {
+                    gap: 20px;
+                    padding-bottom: 40px;
+
+                    .categories {
+                        &__link1 {
+                            width: 176px;
+                            height: 176px;
+                            padding-bottom: 50px;
+
+                            .link1 {
+                                &__tittleCategories {
+                                    width: 80px;
+                                    height: 30px;
+                                    font-weight: 400;
+                                    line-height: 141%;
+                                    font-size: 14px;
+                                    padding-top: 40px;
+                                    padding-bottom: 15px;
+                                }
+
+                                &__items1 {
+
+                                    width: 82px;
+                                    height: 124px;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    width: 176px;
+                                    padding-top: 20px;
+
+                                    .items1 {
+                                        &__item {
+                                            display: block;
+                                            width: 180px;
+                                            color: #828282;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container.categories {
+        margin: 25px auto;
+    }
+
+    .content.categories1 {
+        display: flex;
+
+        .categories1 {
+            &__callback {
+                display: flex;
+                border-bottom: 1ps solid $backgroundcolor;
+
+                .callback {
+                    &__img {
+                        padding-right: 20px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            &__text {
+                width: 114px;
+                height: 15px;
+                padding-left: 275px;
+                padding-right: 35px;
+                font-size: 14px;
+            }
+
+            &__button {
+                width: 150px;
+                height: 30px;
+                border-radius: 40px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .categories.policy {
+        display: flex;
+        gap: 323px;
+
+        .policy {
+            &__text {
+                font-size: 10px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+
+            &__text1 {
+                font-size: 10px;
+                line-height: 100%;
+                text-align: right;
+                color: #828282;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 783px) {
+    .content.menu {
+        .menu {
+            &__item {
+                gap: 20px;
+                padding-top: 10px;
+                padding-bottom: 11px;
+
+                .item {
+                    &__items {
+                        font-size: 8px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .container.header {
+
+        .content.header {
+
+            .header {
+                &__picture {
+                    width: 100px;
+                    height: 30px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+
+
+                &__text {
+                    width: 80px;
+                    height: 15px;
+                    font-size: 10px;
+                    padding-top: 15px;
+                    padding-bottom: 16px;
+                }
+
+                &__button {
+
+                    padding-top: 10px;
+                    padding-bottom: 11px;
+                    padding-left: 10px;
+
+
+                    .button {
+                        &__cta {
+                            width: 70px;
+                            height: 20px;
+                            font-size: 8px;
+                            border: 1px solid #F13C6E;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content.sub-menu {
+
+        .sub-menu {
+
+            &__item {
+                gap: 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+
+                .item {
+                    &__items {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container.superchair {
+        width: 100%;
+        height: 160px;
+
+        .content.superchair {
+
+            .superchair {
+                &__tittle {
+                    width: 120px;
+                    height: 20px;
+                    padding-top: 24px;
+                    font-weight: 400;
+                    font-size: 22px;
+                }
+
+                &__text {
+                    padding-top: 10px;
+                    padding-bottom: 27px;
+                    width: 149px;
+                    height: 21px;
+                    font-size: 8px;
+                    line-height: 12px;
+                }
+
+                &__button {
+                    width: 110px;
+                    height: 20px;
+
+                    .button {
+                        &__chair {
+                            width: 50px;
+                            height: 8px;
+                            font-size: 8px;
+                            padding-top: 2px;
+                            padding-left: 28px;
+                        }
+                    }
+                }
+
+                &__circle1 {
+                    width: 200px;
+                    height: 200px;
+                    margin: -145px 150px;
+                }
+
+                &__circle {
+                    width: 165px;
+                    height: 165px;
+                    margin: -183px 168px;
+                }
+
+                &__chair2 {
+                    margin: 34px 202px;
+                    width: 89px;
+                    height: 126px;
+                }
+            }
+        }
+    }
+
+    .content.offers {
+
+        .offers {
+            &__tittle {
+                width: 275px;
+                height: 29px;
+                font-weight: 700;
+                font-size: 24px;
+                color: $secondtextcolor;
+            }
+
+            &__tittle {
+                width: 115px;
+                height: 19px;
+                padding-top: 23px;
+                padding-bottom: 10px;
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            &__buy {
+                display: flex;
+                gap: 10px;
+
+                .buy {
+                    &__chair {
+                        width: 82px;
+                        height: 168px;
+
+                        .chair {
+                            &__img {
+                                width: 50px;
+                                height: 71px;
+                                padding-left: 15px;
+                                padding-top: 5px;
+                            }
+
+                            &__text {
+                                width: 82px;
+                                height: 25px;
+                                font-size: 7px;
+                                line-height: 121%;
+                                padding-top: 3px;
+                                padding-left: 0;
+                                padding-bottom: 5px;
+                            }
+
+                            &__textpay {
+                                width: 40px;
+                                height: 9px;
+                                font-weight: 300;
+                                font-size: 14px;
+                                padding-left: 22px;
+                                padding-bottom: 15px;
+                            }
+
+                            &__button {
+                                width: 65px;
+                                height: 16px;
+                                margin-left: 8px;
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content.cta {
+        gap: 1px;
+
+        .cta {
+            &__gifts {
+                width: 174px;
+                height: 80px;
+                margin: 20px auto;
+
+                .gifts {
+
+                    &__description {
+
+                        .description {
+
+                            &__tittle {
+                                width: 80px;
+                                height: 10px;
+                                font-weight: 400;
+                                font-size: 8px;
+                                padding-top: 10px;
+                                padding-left: 10px;
+                            }
+
+                            &__text {
+                                width: 61px;
+                                height: 16px;
+                                font-size: 6px;
+                                padding-left: 10px;
+                                padding-top: 5px;
+                            }
+
+                            &__form {
+                                width: 99px;
+                                height: 8px;
+                                font-weight: 150;
+                                font-size: 8px;
+                                padding-left: 10px;
+
+                                .form {
+
+                                    &__email {
+                                        width: 90px;
+                                        height: 11px;
+                                        font-weight: 150;
+                                        font-size: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__img {
+
+                        .img {
+
+                            &__picture {
+                                width: 60px;
+                                height: 42.54px;
+                                padding-top: 15.73px;
+                                padding-left: 0px;
+                                padding-right: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &__visitus {
+                width: 174px;
+                height: 80px;
+                margin: 25px auto;
+
+                .description {
+                    &__tittle {
+                        width: 80px;
+                        height: 10px;
+                        font-weight: 400;
+                        font-size: 8px;
+                        padding-top: 7px;
+                        padding-left: 10px;
+                    }
+
+                    &__text {
+                        width: 54px;
+                        height: 16px;
+                        font-size: 6px;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                    }
+
+                    &__button {
+                        width: 58px;
+                        height: 11px;
+                        margin-left: 10px;
+                        margin-top: 8px;
+                        font-size: 8px;
+                        margin-right: 3px;
+                    }
+                }
+
+                .img {
+                    &__picture1 {
+                        width: 67.67px;
+                        height: 42px;
+                        padding-top: 15px;
+                        padding-right: 0.33px;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .impuls {
+        width: 356px;
+        height: 136px;
+
+        &__table {
+            width: 356px;
+            height: 137px;
+            border-spacing: 1px;
+            border-color: $backgroundcolor;
+
+            .row {
+                &__img {
+                    width: 60px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .content.offers1 {
+
+        .offers1 {
+            &__tittle {
+                width: 159px;
+                height: 15px;
+                font-weight: 400;
+                font-size: 14px;
+                padding-top: 20px;
+                padding-bottom: 8px;
+            }
+
+            &__buy1 {
+                display: flex;
+                gap: 10px;
+
+                .buy1 {
+                    &__chair1 {
+                        width: 82px;
+                        height: 168px;
+                        margin-bottom: 27px;
+
+                        .chair1 {
+                            &__img {
+                                width: 50px;
+                                height: 71px;
+                                padding-left: 15px;
+                                padding-top: 5px;
+                            }
+
+                            &__text {
+                                width: 82px;
+                                height: 25px;
+                                font-size: 7px;
+                                line-height: 121%;
+                                padding-top: 3px;
+                                padding-left: 0;
+                                padding-bottom: 5px;
+                            }
+
+                            &__textpay {
+                                width: 40px;
+                                height: 9px;
+                                font-weight: 300;
+                                font-size: 14px;
+                                padding-left: 22px;
+                                padding-bottom: 15px;
+                            }
+
+                            &__button {
+                                width: 65px;
+                                height: 16px;
+                                margin-left: 8px;
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container.nav {
+        background-color: $maintextcolor;
+        border-bottom: 1px solid $backgroundcolor;
+
+        .content.nav {
+
+            .nav {
+
+                &__categories {
+                    gap: 18px;
+                    padding-bottom: 13px;
+
+                    .categories {
+                        &__link1 {
+                            width: 75px;
+                            height: 110px;
+                            padding-bottom: 5px;
+
+                            .link1 {
+                                &__tittleCategories {
+                                    width: 48px;
+                                    height: 21px;
+                                    font-weight: 200;
+                                    line-height: 88%;
+                                    font-size: 10px;
+                                    padding-top: 8px;
+                                    padding-bottom: 0px;
+                                }
+
+                                &__items1 {
+                                    height: 75px;
+                                    font-size: 8px;
+                                    line-height: 12px;
+                                    width: 70px;
+                                    padding-top: 8px;
+
+                                    .items1 {
+                                        &__item {
+                                            display: block;
+                                            width: 75px;
+                                            color: #828282;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container.categories {
+        margin: 10px auto;
+    }
+
+    .content.categories1 {
+        display: flex;
+
+        .categories1 {
+            &__callback {
+                display: flex;
+                border-bottom: 1ps solid $backgroundcolor;
+
+                .callback {
+                    &__img {
+                        padding-right: 4px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            &__text {
+                width: 74px;
+                height: 15px;
+                padding-left: 130px;
+                padding-right: 12px;
+                font-size: 9px;
+            }
+
+            &__button {
+                width: 69px;
+                height: 15px;
+                border-radius: 40px;
+                font-size: 8px;
+                border: 1px solid #F13C6E;
+            }
+        }
+    }
+
+    .categories.policy {
+        display: flex;
+        gap: 87px;
+
+        .policy {
+            &__text {
+                font-size: 6px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+
+            &__text1 {
+                font-size: 6px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}
