@@ -1,3 +1,14 @@
+circle {
+    fill: rgb(249, 3, 3);
+    stroke: black;
+    transition: .3s;
+}
+
+circle:hover {
+    fill: rgb(0, 187, 255);
+    stroke: rgb(255, 0, 255);
+}
+
 .table {
     margin: 0 auto;
     width: 900px;
@@ -420,5 +431,4 @@ p.test9 {
     margin: 20px;
     display: flex;
     justify-content: center
-    
 }
