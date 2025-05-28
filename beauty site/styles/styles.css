@@ -149,8 +149,9 @@ button {
   margin: -903px 407px;
 }
 .container.superchair .content.superchair .superchair__chair2 {
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 500px;
+  margin: 232px 590px;
 }
 
 .content.offers .offers__tittle {
@@ -348,34 +349,35 @@ button {
   gap: 27px;
 }
 .content.offers1 .offers1__buy1 .buy1__chair1 {
-  width: 170px;
-  height: 258px;
+  width: 255px;
+  height: 363px;
   background: white;
   margin-bottom: 60px;
 }
 .content.offers1 .offers1__buy1 .buy1__chair1 .chair1__img {
-  width: 100px;
-  height: 141px;
-  padding-left: 34px;
-  padding-top: 20px;
+  width: 125px;
+  height: 166px;
+  padding-left: 65px;
+  padding-top: 25px;
 }
 .content.offers1 .offers1__buy1 .buy1__chair1 .chair1__text {
-  width: 140px;
-  height: 25px;
-  font-size: 12px;
-  line-height: 121%;
-  padding-top: 10px;
-  padding-left: 14px;
-  padding-bottom: 15px;
+  width: 195px;
+  height: 33px;
+  font-size: 14px;
+  line-height: 141%;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
   text-align: center;
 }
 .content.offers1 .offers1__buy1 .buy1__chair1 .chair1__textpay {
-  width: 50px;
-  height: 10px;
-  font-weight: 400;
-  font-size: 19px;
-  padding-left: 61px;
-  padding-bottom: 15px;
+  width: 80px;
+  height: 19px;
+  font-weight: 500;
+  font-size: 21px;
+  padding-left: 87px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 .content.offers1 .offers1__buy1 .buy1__chair1 .chair1__button {
   width: 130px;
@@ -447,7 +449,7 @@ button {
   height: 45px;
 }
 .content.categories1 .categories1__text {
-  width: 127px;
+  width: 130px;
   height: 19px;
   padding-left: 524px;
   padding-right: 40px;

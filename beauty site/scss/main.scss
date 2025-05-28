@@ -181,8 +181,10 @@
             }
 
             &__chair2 {
-                width: 100px;
-                height: 100px;
+                width: 400px;
+                height: 500px;
+                margin: 232px 590px;
+
             }
         }
     }
@@ -481,37 +483,38 @@
 
             .buy1 {
                 &__chair1 {
-                    width: 170px;
-                    height: 258px;
+                    width: 255px;
+                    height: 363px;
                     background: white;
                     margin-bottom: 60px;
 
                     .chair1 {
                         &__img {
-                            width: 100px;
-                            height: 141px;
-                            padding-left: 34px;
-                            padding-top: 20px;
+                            width: 125px;
+                            height: 166px;
+                            padding-left: 65px;
+                            padding-top: 25px;
                         }
 
                         &__text {
-                            width: 140px;
-                            height: 25px;
-                            font-size: 12px;
-                            line-height: 121%;
-                            padding-top: 10px;
-                            padding-left: 14px;
-                            padding-bottom: 15px;
+                            width: 195px;
+                            height: 33px;
+                            font-size: 14px;
+                            line-height: 141%;
+                            padding-top: 20px;
+                            padding-left: 30px;
+                            padding-bottom: 20px;
                             text-align: center;
                         }
 
                         &__textpay {
-                            width: 50px;
-                            height: 10px;
-                            font-weight: 400;
-                            font-size: 19px;
-                            padding-left: 61px;
-                            padding-bottom: 15px;
+                            width: 80px;
+                            height: 19px;
+                            font-weight: 500;
+                            font-size: 21px;
+                            padding-left: 87px;
+                            padding-bottom: 20px;
+                            text-align: center;
                         }
 
 
@@ -520,13 +523,13 @@
                             height: 35px;
                             border: none;
                             border-radius: 30px;
-                            background: $secondbackgroundcolor;
-                            text-align: $maintext-align;
+                            background: #F13C6E;
+                            text-align: center;
                             margin-left: 62px;
                             font-size: 14px;
-                            line-height: $mainlineHeight;
+                            line-height: 100%;
                             letter-spacing: 0.5px;
-                            color: $maintextcolor;
+                            color: #FFFFFF;
                         }
                     }
                 }
@@ -618,7 +621,7 @@
         }
 
         &__text {
-            width: 127px;
+            width: 130px;
             height: 19px;
 
             padding: {
