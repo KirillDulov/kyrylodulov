@@ -1,0 +1,98 @@
+body {
+  all: initial;
+}
+
+p {
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: red;
+  margin-bottom: 10px;
+  justify-items: center;
+}
+
+footer {
+  background-color: green;
+  display: flex;
+  gap: 180px;
+  font-size: 6px;
+  padding-left: 20px;
+}
+
+.grid {
+  margin-bottom: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.col {
+  background-color: yellow;
+}
+
+button {
+  justify-content: center;
+}
+
+.absolute {
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: 0.3s ease-out;
+}
+
+@media (width >= 40rem) {
+  footer {
+    gap: 150px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 9px;
+    padding-left: 5px;
+  }
+}
+@media (width >= 48rem) {
+  footer {
+    gap: 270px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 10px;
+    padding-left: 17px;
+  }
+}
+@media (width >= 64rem) {
+  footer {
+    gap: 420px;
+    font-size: 12px;
+    padding-left: 20px;
+  }
+}
+@media (width >= 80rem) {
+  footer {
+    gap: 410px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
+@media (width >= 96rem) {
+  footer {
+    background-color: green;
+    display: flex;
+    gap: 400px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+    padding-left: 30px;
+  }
+  p {
+    font-size: 24px;
+  }
+  span {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:\\Users\\Кирилл\\js\\hw14\\index.html"
+            "file": "C:\\Users\\Кирилл\\js\\hw15\\index.html"
         },
         {
             "type": "chrome",

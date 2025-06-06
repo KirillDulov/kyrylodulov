@@ -1,0 +1,51 @@
+body {
+    all: initial;
+}
+
+p {
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: red;
+    margin-bottom: 10px;
+    justify-items: center;
+}
+
+footer {
+    background-color: green;
+    display: flex;
+    gap: 180px;
+    font-size: 6px;
+    padding-left: 20px;
+}
+
+.grid {
+    margin-bottom: 10px;
+    display: grid;
+    gap: 10px;
+
+}
+
+.col {
+    background-color: yellow;
+
+}
+
+button {
+    justify-content: center;
+
+}
+
+.absolute {
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: .3s ease-out;
+}
+
+
