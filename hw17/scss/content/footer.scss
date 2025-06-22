@@ -1,0 +1,82 @@
+.footer {
+    background-color: #F5F5FA;
+    padding-top: 60px;
+    width: $layout-width;
+    height: 110px;
+
+    .content {
+        width: 1600px;
+        height: 79px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 160px;
+        position: relative;
+        margin: $layoutmargin;
+    }
+
+    .content::before {
+        content: '';
+        height: 2px;
+        width: 1600px;
+        background-color: #E6E6F0;
+        position: absolute;
+        top: -30px;
+    }
+
+    &__address {
+        width: 310px;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 21px;
+        color: #323264;
+        position: relative;
+
+        &::after {
+            content: none;
+            width: 6px;
+            height: 6px;
+            background-color: $secondcolor;;
+            border-radius: 50%;
+            top: 5px;
+            position: relative;
+            right: 90px;
+        }
+    }
+
+    &__map {
+        @include mainfonts;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $firstcolor;
+        margin-left: 26px;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        font-weight: $mainfont;
+    }
+
+    &__point:nth-child(-n+2) {
+        &::after {
+            margin-left: 10px;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: $secondcolor;;
+            border-radius: 50%;
+            display: inline-block;
+            top: 54px;
+            position: absolute;
+        }
+    }
+
+    &__email {
+        color: $firstcolor;
+    }
+
+    &__trademark {
+        margin-left: auto;
+    }
+}

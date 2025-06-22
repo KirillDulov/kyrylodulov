@@ -1,0 +1,511 @@
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .top {
+        width: $layout-width;
+        height: 2959px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 94%;
+            height: 10px;
+            background-color: #CACADB;
+            display: block;
+            margin-left: $mainmargin;            border-bottom-right-radius: $mainborder-radius;            z-index: -1;
+            position: absolute;
+            border-bottom-left-radius: $mainborder-radius;            top: 2959px;
+        }
+    }
+
+    #header {
+        .content {
+            width: 648px;
+        }
+    }
+
+    #logo-publications {
+        margin-left: 0;
+    }
+
+    #info-publications {
+        margin-left: 0;
+    }
+
+    #menu-publications {
+        ul {
+            margin-left: 0;
+            gap: 15px;
+
+            li {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .header {
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 220px;
+        }
+
+        &__logo {
+            order: 2;
+            margin-left: 60px;
+            margin-top: 0;
+            margin-bottom: $mainmargin;            z-index: 1;
+            width: 500px;
+        }
+
+        &__languages {
+            font-size: 12px;
+        }
+
+        &__info {
+            order: 1;
+            justify-content: flex-start;
+            margin-left: 60px;
+            margin-bottom: $mainmargin;            width: 500px;
+        }
+
+        &__menu {
+            order: 3;
+            z-index: 1;
+            width: 500px;
+
+            ul {
+                order: 3;
+                /* justify-self: flex-start; */
+                display: flex;
+                margin-left: 44px;
+                justify-content: flex-start;
+                width: 500px;
+            }
+        }
+    }
+
+    .hero {
+        height: $layout-width;
+
+        .content {
+            width: 712px;
+            height: 1024px;
+            margin: $layoutmargin;            position: relative;
+            overflow: hidden;
+        }
+
+        &__img {
+            left: -63px;
+            width: 893.28px;
+            height: 1024px;
+        }
+
+        &__text {
+            top: 489px;
+            left: 34px;
+            width: 692px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        &__vector1 {
+            top: 952px;
+            left: 363px;
+        }
+    }
+
+    .tabs {
+        width: $layout-width;
+        margin: $layoutmargin;        padding-top: 870.66px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 648px;
+            height: 357px;
+            overflow: hidden;
+        }
+
+        &__text {
+            display: flex;
+            position: relative;
+            gap: 30px;
+            width: 1246px;
+            height: 46px;
+            margin-bottom: 60px;
+        }
+
+        &__text::after {
+            width: 648px;
+            height: 4px;
+            top: 106px;
+            left: 0px;
+        }
+
+        &__text-1,
+        &__text-2,
+        &__text-3,
+        &__text-4 {
+            margin-bottom: 0;
+        }
+
+        &__we-tur-the-idea {
+            margin-top: 75px;
+            margin-left: 0;
+            height: 187px;
+        }
+
+        &__we-tur {
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: $mainmargin;        }
+
+        &__consolidating {
+            margin-left: 0;
+            width: 648px;
+        }
+    }
+
+    .what-can-we-do {
+        width: $layout-width;
+        padding-top: 0;
+
+        &::after {
+            left: -6px;
+            width: 91%;
+            top: 2969px;
+        }
+
+        .content {
+            width: 648px;
+        }
+
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .main {
+        width: $layout-width;
+        height: 982px;
+        margin: $layoutmargin;
+        .content {
+            width: 648px;
+        }
+
+        &__title1 {
+            width: 444px;
+        }
+
+        &__team {
+            width: 648px;
+            height: 936px;
+            display: block;
+            border-radius: $mainborder-radius;        }
+
+        &__image {
+            width: 648px;
+            height: 500px;
+            position: relative;
+        }
+
+        &__img {
+            left: 0px;
+            width: 648px;
+            height: 500px;
+            border-top-left-radius: $mainborder-radius;            border-top-right-radius: $mainborder-radius;            position: absolute;
+        }
+
+        &__text1 {
+            width: 588px;
+            height: 276px;
+        }
+
+        &__carusel-indicators {
+            margin-left: 238px;
+        }
+    }
+
+    .trust {
+        width: $layout-width;
+        height: 317px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .content {
+            width: $layout-width;
+            margin: 0;
+            height: 329px;
+        }
+
+        &__tittle {
+            margin-left: 279.5px;
+            width: 220px;
+            margin: $layoutmargin;            padding-bottom: 30px;
+        }
+
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0fr 0fr 0fr 0fr;
+            width: 709px;
+            height: 480px;
+            margin: $layoutmargin;
+            img {
+                border-radius: 0;
+                width: 236px;
+            }
+        }
+
+        &__item {
+            border-top-left-radius: $mainborder-radius;        }
+
+        &__item1 {
+            border-top-right-radius: $mainborder-radius;        }
+
+        &__item2 {
+            border-bottom-left-radius: $mainborder-radius;        }
+
+        &__item3 {
+            border-bottom-right-radius: $mainborder-radius;        }
+    }
+
+    #publications {
+        height: 1742px;
+    }
+
+    .publications {
+        width: $layout-width;
+        height: 1036px;
+        margin: $layoutmargin;
+        .content {
+            width: 648px;
+            height: 1065px;
+        }
+
+        &__we-have-something {
+            padding-top: 30px;
+            margin-bottom: $mainmargin;            position: relative;
+        }
+
+        &__link {
+            margin-bottom: 10px;
+        }
+
+        &__link1::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 1px;
+        }
+
+        &__tittle {
+            font-weight: $mainfont;
+            font-size: 38px;
+            line-height: $mainlineheight;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+            background-clip: text;
+            color: transparent;
+        }
+
+        &__items {
+            width: 648px;
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            row-gap: 30px;
+            height: 513px;
+        }
+
+        #items {
+            height: 1552px;
+        }
+
+        &__item {
+            width: 309px;
+            height: 514px;
+        }
+
+        &__item1 {
+            background-color: $maincolor;;
+            border-radius: $mainborder-radius;            height: 543px;
+            width: 309px;
+        }
+
+        &__item2 {
+            background-color: $maincolor;;
+            border-radius: $mainborder-radius;            height: 543px;
+            width: 309px;
+        }
+
+        &__item3 {
+            height: 400px;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            display: grid;
+            grid-template-rows: 0fr 0fr 0fr 0fr;
+            background-color: $maincolor;;
+            width: 648px;
+            border-radius: $mainborder-radius;        }
+
+        #item1 {
+            height: 496px;
+            width: 309px;
+        }
+
+        #item2 {
+            height: 496px;
+            width: 309px;
+        }
+
+        #item3 {
+            grid-column-end: 1;
+            width: 309px;
+            height: 496px;
+        }
+
+
+        #item4 {
+            height: 496px;
+            width: 309px;
+        }
+
+        #item5 {
+            height: 496px;
+            width: 309px;
+        }
+
+        #item6 {
+            height: 496px;
+            width: 309px;
+        }
+
+        &__img {
+            width: 309px;
+            height: 200px;
+        }
+
+        &__img3 {
+            width: 648px;
+            height: 200px;
+        }
+
+        #img-equity {
+            width: 309px;
+        }
+
+        &__equity {
+            width: 249px;
+        }
+
+        &__equity3 {
+            font-size: 16px;
+            color: $firstcolor;;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: $mainmargin;        }
+
+        &__date {
+            font-weight: $mainfont;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $secondcolor;;
+        }
+
+        &__date::after {
+            width: 249px;
+            top: 27px;
+        }
+
+        &__date3 {
+            font-weight: $mainfont;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $secondcolor;;
+            margin-top: $mainmargin;            margin-left: $mainmargin;            position: relative;
+        }
+
+        &__date3::after {
+            content: '';
+            width: 588px;
+            height: 4px;
+            position: absolute;
+            background-color: #E6E6F0;
+            top: 30px;
+            left: 0;
+            margin-left: 0;
+        }
+
+        #date3 {
+            margin-top: 15px;
+        }
+
+        #date3::after {
+            width: 249px;
+        }
+
+        &__text3 {
+            margin-top: 15px;
+            width: 588px;
+            font-size: 14px;
+            line-height: 22px;
+            margin-left: $mainmargin;            padding-top: 0;
+        }
+
+        #text3 {
+            width: 249px;
+        }
+
+        #text6 {
+            margin-top: 35px;
+            width: 249px;
+        }
+
+        &__more {
+            margin-left: 218.5px;
+        }
+    }
+
+    .switch {
+        .content {
+            width: 233px;
+            height: 42px;
+            background: #E6E6F0;
+            border-radius: $mainborder-radius;            position: relative;
+            margin-bottom: $mainmargin;        }
+    }
+
+    #footer {
+        padding-top: 60px;
+    }
+
+    .footer {
+        padding-top: 122px;
+        width: $layout-width;
+        margin: $layoutmargin;
+        .content {
+            width: 648px;
+        }
+
+        .content::before {
+            width: 648px;
+
+        }
+
+        &__contacts {
+            position: relative;
+        }
+
+        &__phone {
+            width: 398px;
+        }
+
+        &__trademark {
+            width: 300px;
+            position: absolute;
+            left: 366px;
+        }
+    }
+}

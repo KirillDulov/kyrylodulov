@@ -1,0 +1,27 @@
+a,
+body {
+    text-decoration: none;
+    color: currentColor;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 100%;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+ul,
+p {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

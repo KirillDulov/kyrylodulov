@@ -1,0 +1,193 @@
+#publications {
+    height: 1060px;
+
+    #switch-content {
+        width: 233px;
+    }
+
+}
+
+.publications {
+    width: $layout-width;
+    height: 572px;
+    background-color: #F5F5FA;
+    padding-top: 30px;
+
+    .content {
+        margin: $layoutmargin;
+        margin-bottom: 30px;
+        width: 1600px;
+    }
+
+    &__we-have-something {
+        padding-top: 30px;
+        margin-bottom: $mainmargin;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__link {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $firstcolor;
+        position: relative;
+    }
+
+    &__link1::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 1px;
+    }
+
+    &__tittle {
+        font-weight: $mainfont;
+        font-size: 38px;
+        line-height: $mainlineheight;
+        background: linear-gradient(90.13deg, $thirdcolor 0.84%, #EF8080 99.96%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1600px;
+        height: 430px;
+        column-gap: 30px;
+        margin: $layoutmargin;
+        row-gap: 30px;
+    }
+
+    &__item1,
+    &__item2,
+    &__item3 {
+        background-color: $maincolor;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    #item1 {
+        height: 420px;
+        border-radius: 8px;
+    }
+
+    #item2,
+    #item3 {
+        height: 420px;
+        border-radius: 8px;
+    }
+
+    #item4,
+    #item5,
+    #item6 {
+        height: 420px;
+        background: $maincolor;
+        border-radius: 8px;
+    }
+
+    &__img,
+    &__img3 {
+        margin-bottom: $mainmargin;
+        width: 513.33px;
+    }
+
+    #img-equity {
+        height: 200px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    &__equity {
+        font-size: 16px;
+        color: $firstcolor;
+        margin-left: $mainmargin;
+        margin-bottom: 15px;
+        width: 453.33px;
+    }
+
+    #equity1:hover {
+        content: '';
+        color: $thirdcolor;
+        ;
+    }
+
+    &__equity3 {
+        font-size: 16px;
+        color: $firstcolor;
+        margin-left: $mainmargin;
+        margin-bottom: 15px;
+    }
+
+    #equity6 {
+        margin-top: $mainmargin;
+    }
+
+    &__date,
+    &__date3 {
+        @include mainfonts;
+        line-height: $mainlineheight;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $secondcolor;
+        ;
+        margin-bottom: 15px;
+        position: relative;
+        margin-left: $mainmargin;
+    }
+
+    &__date::after {
+        content: "";
+        width: 453.33px;
+        height: 4px;
+        background-color: #E6E6F0;
+        position: absolute;
+        top: 27px;
+        right: 30px;
+        margin-bottom: 15px;
+        margin-left: $mainmargin;
+    }
+
+    &__date3::after {
+        content: "";
+        width: 453.33px;
+        height: 4px;
+        background-color: #E6E6F0;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        margin-bottom: 15px;
+        margin-left: $mainmargin;
+    }
+
+    &__text,
+    &__text3 {
+        font-size: 14px;
+        line-height: 22px;
+        padding-top: 15px;
+        margin-left: $mainmargin;
+        width: 453.33px;
+    }
+
+    &__more {
+        margin-top: 470px;
+        width: 211px;
+        height: 56px;
+        background: $firstcolor;
+        border-radius: $mainborder-radius;
+        box-shadow: 0 0 20px 0 $firstcolor 80;
+        margin-left: 694.5px;
+        margin-bottom: $mainmargin;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__more-text {
+        padding-top: 18px;
+        font-weight: $mainfont;
+        color: $maincolor;
+    }
+}
