@@ -1,11 +1,12 @@
-const myNum = 10;
-const myStr = 'some string';
-const myBool = true;
+function getRandomInt(max) {
+    return Math.floor(Math.random() * (max + 1))
+}
+console.log(getRandomInt(10));
+console.log(getRandomInt(50));
+console.log(getRandomInt(100));
 
-decimal2 = myNum;
-console.log(decimal2.toFixed(2));
-
-let myBigInt = 123n;
-let myBigInt1 = 1n
-myBigInt = myBigInt + myBigInt1;
-console.log(myBigInt);
+function greetByName(msg, name) {
+    console.log(msg + ',' + ' ' + name)
+    return
+}
+greetByName('Hi', 'John');
