@@ -1,53 +1,75 @@
-function curriedAdd(a) {
-    return function (b) {
-        return function (c) {
-            return a + b + c;
-        };
-    };
-}
-const addFirst = curriedAdd(5);
-const addSecond = addFirst(10);
-const result = addSecond(3);
-console.log('Result:', result)
+const counter = (function () {
+    let count = 0;
 
-
-function curriedDomain(protocol) {
-    return function (domainName) {
-        return function (tld) {
-            return protocol + domainName + tld;
-        };
-    };
-}
-
-const protocolSetter = curriedDomain('https://')
-const domainNameSetter = protocolSetter('example')
-const fullDomain = domainNameSetter('.com')
-console.log('Full Domain:', fullDomain)
-
-
-function originalFunction(num) {
-    return num * 4;
-}
-
-function modifyFunction(originalFunction, multiplier) {
-    return function modifiedFunc(a) {
-        return originalFunction(a) * multiplier;
-    };
-}
-const modifiedFunc = modifyFunction(originalFunction, 3);
-console.log('Original function output for 4:', originalFunction(4));
-console.log('Modified function output for 4:', modifiedFunc(4))
-
-
-function outerFunction(arg1) {
-    function innerFunction(arg2) {
-        function deepInnerFunction(arg3) {
-            return arg1 * arg2 * arg3;
+    return function (n) {
+        if (typeof n === 'number') {
+            count = n;
         }
-        return deepInnerFunction;
-    }
-    return innerFunction;
-}
-const result1 = outerFunction(2)(3)(4)
-console.log(result1)
+        return count++;
+    };
+})();
 
+console.log(counter())
+console.log(counter(100))
+console.log(counter())
+
+
+
+const counterFactory = (function () {
+    let count = 0;
+    return {
+        value(n) {
+            if (typeof n === 'number') {
+                count = n;
+            }
+            return count;
+        },
+        increment() {
+            return ++count;
+        },
+        decrement() {
+            return --count;
+        }
+    };
+})()
+counterFactory.increment()
+counterFactory.increment()
+counterFactory.increment()
+console.log(counterFactory.value());
+
+
+
+const myPrint = (a, b, res) => {
+    return a + '^' + b + '=' + res;
+};
+
+const myPow = (a, b, myPrint) => {
+    const recPow = (x, y) => {
+        if (y === 0) return 1;
+        if (y > 0) return x * recPow(x, y - 1);
+        return 1 / recPow(x, -y);
+    };
+    const result = recPow(a, b);
+    return myPrint(a, b, result);
+};
+console.log(myPow(3, 4, myPrint));
+console.log(myPow(2, -2, myPrint))
+
+
+
+const myMax = (arr) => {
+    return Math.max.apply(null, arr);
+}
+const list = [12, 23, 100, 34, 56, 9, 233]
+console.log(myMax(list));
+
+
+const myMul = (a, b) => {
+    return a * b;
+};
+
+const myDouble = myMul.bind(null, 2);
+console.log(myDouble(3))
+
+const myTriple = myMul.bind(null, 3);
+console.log(myTriple(5))
