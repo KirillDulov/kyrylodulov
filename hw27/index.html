@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body,
+        #app {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            display: block;
+            width: 1024px;
+            height: 768px;
+        }
+
+        #app {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #slider-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 1202px;
+        }
+
+        #prev {
+            margin-right: 20px;
+        }
+
+        #next {
+            margin-left: 20px;
+        }
+
+        #dots {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: bisque;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .dot.active {
+            background-color: brown;
+            pointer-events: none;
+        }
+
+        .dot:not(.active):hover {
+            opacity: 1;
+        }
+
+        .nav {
+            font-size: 50px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav:hover {
+            transform: scale(1.1);
+        }
+
+        #slider {
+            width: 1024px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slider-track {
+            display: flex;
+            flex-direction: row;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .slide {
+            width: 1024px;
+            height: 768px;
+        }
+    </style>
+    <title>JS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="slider-container">
+            <div id="prev" class="nav">⏮️</div>
+            <div id="slider">
+                <div id="slider-track">
+                    <div class="slide">
+                        <img src="./images/3d-lampa-derevo-miniatyurnii-razmitost-91733.jpeg" alt="derevo">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/3d-shari-raznotsvetnii-yarkii-131372.jpeg" alt="yarkiy">
+                    </div>
+                    <div class="slide"><img
+                            src="./images/3d-vspishka-kosmicheskii-oskolki-razletatsya-yarkii-raznotsvetnii-145534.jpeg"
+                            alt="oskolki"></div>
+                    <div class="slide"><img src="./images/vishnya-yagoda-3d-99227.jpeg" alt="vishnya"></div>
+                </div>
+            </div>
+            <div id="next" class="nav">⏭️</div>
+            <div id="dots">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./scripts/script.js"></script>
+
+</html>
