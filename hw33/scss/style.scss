@@ -1,0 +1,13 @@
+h1 {
+  background-color: blue;
+}
+
+h2 {
+  color: green;
+}
+
+body {
+  transition: background-color .3s ease;
+  transform: scale(1.05);
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+{
+  "always-semicolon": true,
+  "color-case": "lower",
+  "block-indent": "  ",
+  "space-before-colon": "",
+  "space-after-colon": " ",
+  "space-before-combinator": "",
+  "space-after-combinator": " ",
+  "space-before-opening-brace": " ",
+  "space-after-opening-brace": "\n",
+  "space-before-closing-brace": "\n",
+  "newline-between-rules": true,
+  "sort-order": [
+    "position",
+    "display",
+    "width",
+    "height",
+    "margin",
+    "padding",
+    "font",
+    "color",
+    "background",
+    "border",
+    "other"
+  ]
+}
