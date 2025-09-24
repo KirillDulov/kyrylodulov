@@ -1,12 +1,7 @@
-export default function Button() {
-
-    const handleClick = () => {
-        alert("Кнопка натиснута!");
-    };
-
+export default function Button({ text, onClick }) {
     return (
-        <button type="button" onClick={handleClick}>
-            Натисни мене
+        <button type="button" onClick={onClick}>
+            {text}
         </button>
     );
 }
