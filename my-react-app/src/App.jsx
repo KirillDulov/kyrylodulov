@@ -9,10 +9,19 @@ import ControlledInput from '../Components/Forms/ControlledInput'
 import ControlledSelect from '../Components/Forms/ControlledSelect'
 import UncontrolledInput from '../Components/Forms/UncontrolledInput'
 import UserProfile from '../Components/Forms/UserProfile'
+import MessageComponent from '../Components/MessageComponent'
 
+function fetchMessage() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("✅ Дані отримані з сервера");
+    }, 2000);
+  });
+}
 
 function App() {
   const [count, setCount] = useState(0)
+  const promise = fetchMessage();
 
   return (
     <div id='App'>
@@ -23,6 +32,7 @@ function App() {
       <ControlledSelect />
       <UncontrolledInput />
       <UserProfile />
+      <MessageComponent promise={promise} />
     </div>
   )
 }
