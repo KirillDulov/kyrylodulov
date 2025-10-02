@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from "react";
+import { use } from "react";
 
-export default function MessageComponent({ promise }) {
-    const [message, setMessage] = useState(" Завантаження...");
+const postsPromise = fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => {
+        if (!res.ok) throw new Error("Помилка завантаження постів");
+        return res.json();
+    });
 
-    useEffect(() => {
-        let isMounted = true;
-
-        promise.then((result) => {
-            if (isMounted) setMessage(result);
-        });
-
-        return () => {
-            isMounted = false;
-        };
-    }, [promise]);
+export default function Posts() {
+    const posts = use(postsPromise);
 
     return (
         <div>
-            <h2>Повідомлення:</h2>
-            <p>{message}</p>
+            <h2>Пости</h2>
+            <ul>
+                {posts.slice(0, 5).map((post) => (
+                    <li key={post.id}>
+                        <strong>{post.title}</strong>
+                        <p>{post.body}</p>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
