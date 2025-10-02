@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Button from '../Components/Button';
-import Paragraph from '../Components/Paragraph';
+import Button from '../../src/Components/Button';
+import Paragraph from '../../src/Components/Paragraph';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
