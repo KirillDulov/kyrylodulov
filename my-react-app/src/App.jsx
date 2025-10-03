@@ -15,6 +15,7 @@ import UncontrolledInput from '../src/Components/Forms/UncontrolledInput'
 import UserProfile from '../src/Components/Forms/UserProfile'
 import MessageComponent from '../src/Components/MessageComponent'
 import ErrorBoundary from "../src/Components/ErrorBoundary.jsx";
+import DataFetcher from '../src/Components/DataFetcher.jsx'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <MessageComponent />
         </Suspense>
       </ErrorBoundary>
+      <DataFetcher />
     </div>
   )
 }
