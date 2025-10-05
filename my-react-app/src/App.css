@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  place-items: start;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+}

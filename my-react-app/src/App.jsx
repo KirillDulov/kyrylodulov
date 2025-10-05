@@ -16,6 +16,9 @@ import UserProfile from '../src/Components/Forms/UserProfile'
 import MessageComponent from '../src/Components/MessageComponent'
 import ErrorBoundary from "../src/Components/ErrorBoundary.jsx";
 import DataFetcher from '../src/Components/DataFetcher.jsx'
+import StyledComponentTest from '../src/Components/StyledComponentTest.jsx'
+
+import { Link, Outlet, NavLink } from "react-router";
 
 
 function App() {
@@ -23,19 +26,27 @@ function App() {
 
   return (
     <div id='App'>
-      <Counter />
-      <Button text='Натисни мене' alert='Кнопка натиснута' />
-      <Hello />
-      <ControlledInput />
-      <ControlledSelect />
-      <UncontrolledInput />
-      <UserProfile />
-      <ErrorBoundary>
-        <Suspense fallback={<p>Завантаження постів...</p>}>
-          <MessageComponent />
-        </Suspense>
-      </ErrorBoundary>
-      <DataFetcher />
+      <nav>
+        <NavLink to="/">Home</NavLink> |{" "}
+        <NavLink to="/about" end>About</NavLink> | {" "}
+        <NavLink to="/contact">Contact</NavLink>
+      </nav>
+      <hr />
+      <Outlet />
+      {/* <Counter /> */}
+      {/* <Button text='Натисни мене' alert='Кнопка натиснута' /> */}
+      {/* <Hello /> */}
+      {/* <ControlledInput /> */}
+      {/* <ControlledSelect /> */}
+      {/* <UncontrolledInput /> */}
+      {/* <UserProfile /> */}
+      {/* <ErrorBoundary> */}
+        {/* <Suspense fallback={<p>Завантаження постів...</p>}> */}
+          {/* <MessageComponent /> */}
+        {/* </Suspense> */}
+      {/* </ErrorBoundary> */}
+      {/* <DataFetcher /> */}
+      {/* <StyledComponentTest /> */}
     </div>
   )
 }
