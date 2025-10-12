@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import { useContext } from 'react';
 import { Link, Outlet, NavLink } from "react-router-dom";
 
+
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 
@@ -21,6 +22,7 @@ import ErrorBoundary from "../src/Components/ErrorBoundary.jsx";
 import DataFetcher from '../src/Components/DataFetcher.jsx'
 import StyledComponentTest from '../src/Components/StyledComponentTest.jsx'
 import Home from './Components/Pages/Home.jsx';
+import ThemeSwitcher from './Components/ThemeSwitcher.jsx';
 
 
 function App() {
@@ -28,12 +30,13 @@ function App() {
 
   return (
     <div id='App'>
+      
       <nav>
         <NavLink to="/">Home</NavLink> |{" "}
         <NavLink to="/about" end>About</NavLink> |{" "}
         <NavLink to="/contact">Contact</NavLink>
       </nav>
-      
+      <ThemeSwitcher />
       <ThemeProvider>
         <Home />
       </ThemeProvider>
