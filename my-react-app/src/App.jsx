@@ -38,7 +38,7 @@ function App() {
       </nav>
       <ThemeSwitcher />
       <ThemeProvider>
-        <Home />
+        <Outlet />
       </ThemeProvider>
       {/* <Counter /> */}
       {/* <Button text='Натисни мене' alert='Кнопка натиснута' /> */}
@@ -54,7 +54,7 @@ function App() {
       {/* </ErrorBoundary> */}
       {/* <DataFetcher /> */}
       {/* <StyledComponentTest /> */}
-
+      
     </div>
   )
 }

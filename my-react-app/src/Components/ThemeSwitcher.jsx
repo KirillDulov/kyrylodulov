@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { switchTheme } from '../reducers/themeReducer'
+import { switchTheme } from '../slices/themeSlice';
+
 
 const ThemeSwitcher = () => {
     const dispatch = useDispatch();
     const theme = useSelector((state) => state.theme.theme);
 
     useEffect(() => {
-        document.body.classList.remove('light', 'dark');
-        document.body.classList.add(theme === 'світла' ? 'light' : 'dark');
+        console.log('Current theme:', theme);
+        document.body.classList.remove('світла', 'темна');
+        document.body.classList.add(theme);
     }, [theme]);
 
     return (
         <div style={{ padding: 20 }}>
-            <h2>Поточна тема: {theme}</h2>
-            <button onClick={() => dispatch(switchTheme())}>Перемкнути тему</button>
+
+            <div className="switch-container" onClick={() => dispatch(switchTheme())}>
+                <div className='switch-slider'></div>
+            </div>
         </div>
     );
 };
