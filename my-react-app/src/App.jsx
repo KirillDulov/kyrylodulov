@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React, { Suspense } from "react";
 import { useContext } from 'react';
 import { Link, Outlet, NavLink } from "react-router-dom";
-import './index.css'
+
 
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -34,8 +34,7 @@ function App() {
       <nav>
         <NavLink to="/">Home</NavLink> |{" "}
         <NavLink to="/about" end>About</NavLink> |{" "}
-        <NavLink to="/contact">Contact</NavLink> |{" "}
-        <NavLink to="/form">Form</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </nav>
       <ThemeSwitcher />
       <ThemeProvider>

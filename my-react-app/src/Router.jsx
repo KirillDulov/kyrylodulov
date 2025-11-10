@@ -4,8 +4,7 @@ import Home from "./Components/Pages/Home.jsx";
 import About from "./Components/Pages/About.jsx";
 import Contact from "./Components/Pages/Contact.jsx";
 import Post from './Containers/Post.jsx';
-import Posts from './Containers/Posts.jsx';
-import Form from './Components/Pages/Form.jsx'
+import Posts from './Containers/Posts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },             
       { path: "about", element: <About /> },       
       { path: "contact", element: <Contact /> },
-      { path: "form", element: <Form /> },
       { path: "posts", element: <Posts /> },
       { path: "post/:id", element: <Post /> },     
     ],

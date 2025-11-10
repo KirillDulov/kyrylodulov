@@ -47,7 +47,7 @@ const ReduxFormMaterialUI = () => {
             </Typography>
 
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                {/* Full name */}
+
                 <TextField
                     label="Full Name"
                     fullWidth
@@ -57,7 +57,7 @@ const ReduxFormMaterialUI = () => {
                     helperText={errors.fullName?.message}
                 />
 
-                {/* Email */}
+
                 <TextField
                     label="Email"
                     type="email"
@@ -74,7 +74,7 @@ const ReduxFormMaterialUI = () => {
                     helperText={errors.email?.message}
                 />
 
-                {/* Age */}
+
                 <TextField
                     label="Age"
                     type="number"
@@ -89,7 +89,7 @@ const ReduxFormMaterialUI = () => {
                     helperText={errors.age?.message}
                 />
 
-                {/* Gender */}
+
                 <FormControl
                     component="fieldset"
                     margin="normal"
@@ -115,7 +115,7 @@ const ReduxFormMaterialUI = () => {
                     )}
                 </FormControl>
 
-                {/* Terms checkbox */}
+
                 <FormControlLabel
                     control={
                         <Checkbox
@@ -133,7 +133,7 @@ const ReduxFormMaterialUI = () => {
                     </Alert>
                 )}
 
-                {/* Submit button */}
+
                 <Button
                     type="submit"
                     variant="contained"
