@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import FormikForm from "../../Containers/FormikForm";
 import ReduxForm from "../../Containers/ReduxForm";
 import ReduxFormMaterialUI from "../../Containers/ReduxFormMaterialUI";
+import FormikForm from "../../Containers/FormikForm"
 
 const Form = () => {
     return (
@@ -10,6 +10,7 @@ const Form = () => {
             <ReduxForm />
             <FormikForm />
             <ReduxFormMaterialUI />
+
         </>
     );
 };
