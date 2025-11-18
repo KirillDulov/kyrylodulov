@@ -1,0 +1,19 @@
+"posts": [
+    {
+        "id": 1,
+        "tittle": "lorem ipsum sunt aut sdfjh",
+        "body": "wodfhsdf jnsjdf sdfjhas sdhfisudhf sduhfahf"
+    },
+    
+    {
+        "id": 2,
+        "tittle": "lorem ipsum ",
+        "body": "wodfhsdf jnsjdf sdfjhas sdhfisudhf sduhfahf"
+    },
+
+    {
+        "id": 3,
+        "tittle": "lorem ipsum sunt ",
+        "body": "wodfhsdf jnsjdf sdfjhas sdhfisudhf sduhfahf"
+    }
+]
