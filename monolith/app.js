@@ -109,3 +109,56 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
     console.log(`Сервер запущено на порту ${PORT}`);
 });
+
+// hw58
+// 1
+const crypto = require('crypto');
+const { pbkdf2Sync, randomBytes } = crypto;
+
+function generateHash(input) {
+    return crypto
+        .createHash('sha256')
+        .update(input, 'utf8')
+        .digest('hex');
+}
+
+console.log(generateHash('Hello, World!'))
+
+// 2
+const password = 'superSecret123'
+const salt = randomBytes(16).toString('hex')
+const hash = generatePasswordHash(password, salt)
+
+function generatePasswordHash(password, salt, iterations = 10000, keylen = 64, digest = 'sha512') {
+    if (typeof password !== 'string' || typeof salt !== 'string') {
+        throw new TypeError('Password and salt must be strings');
+    }
+
+    return pbkdf2Sync(password, salt, iterations, keylen, digest)
+        .toString('hex');
+}
+
+console.log(hash);
+
+// 3
+
+const inputPassword = 'superSecret123'
+const isCorrect = verifyPassword(inputPassword, hash, salt);
+
+function verifyPassword(
+    inputPassword,
+    storedHash,
+    salt,
+    iterations = 10000,
+    keylen = 64,
+    digest = 'sha512',
+) {
+    if (typeof inputPassword !== 'string' || typeof storedHash !== 'string' || typeof salt !== 'string') {
+        throw new TypeError('Input password, stored hash and salt must be strings');
+    }
+
+    const hashToCompare = pbkdf2Sync(inputPassword, salt, iterations, keylen, digest).toString('hex');
+    return hashToCompare === storedHash;
+}
+
+console.log(isCorrect ? 'Пароль вірний.' : 'Пароль невірний.')
