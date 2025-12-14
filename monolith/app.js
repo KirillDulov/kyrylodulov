@@ -162,3 +162,95 @@ function verifyPassword(
 }
 
 console.log(isCorrect ? 'Пароль вірний.' : 'Пароль невірний.')
+
+// hw59
+
+// 1
+const zlib = require('zlib');
+
+async function compressFile(filePath) {
+    try {
+        await fs.promises.access(filePath);
+        const compressedPath = `${filePath}.gz`;
+
+        let finalPath = compressedPath;
+        let counter = 1;
+
+        while (fs.existsSync(finalPath)) {
+            finalPath = `${filePath}(${counter}).gz`;
+            counter++;
+        }
+
+        const readStream = fs.createReadStream(filePath);
+        const writeStream = fs.createWriteStream(finalPath);
+        const gzip = zlib.createGzip();
+
+        readStream
+            .pipe(gzip)
+            .pipe(writeStream);
+
+        await new Promise((resolve, reject) => {
+            writeStream.on('finish', resolve);
+            writeStream.on('error', reject);
+        });
+
+        return finalPath;
+
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            throw new Error('Файл не знайдено');
+        }
+
+        throw new Error('Помилка під час компресії');
+    }
+}
+
+// 2
+async function decompressFile(compressedFilePath, destinationFilePath) {
+    try {
+        await fs.promises.stat(compressedFilePath);
+
+        let finalPath = destinationFilePath;
+        let counter = 1;
+
+        while (fs.existsSync(finalPath)) {
+
+            const ext = path.extname(destinationFilePath);
+            const base = path.basename(destinationFilePath, ext);
+
+            finalPath = path.join(path.dirname(destinationFilePath), `${base}(${counter})${ext}`);
+            counter++;
+        }
+
+        const readStream = fs.createReadStream(compressedFilePath);
+        const writeStream = fs.createWriteStream(finalPath);
+        const gunzip = zlib.createGunzip();
+
+        readStream.pipe(gunzip).pipe(writeStream);
+
+        await new Promise((resolve, reject) => {
+            writeStream.on('finish', resolve);
+            writeStream.on('error', reject);
+        });
+
+        return finalPath;
+
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            throw new Error('Файл не знайдено');
+        }
+        throw new Error('Помилка під час розпакування');
+    }
+}
+
+async function performCompressionAndDecompression() {
+    try {
+        const compressedResult = await compressFile('./source.txt')
+        console.log(compressedResult)
+        const decompressedResult = await decompressFile(compressedResult, './source_decompressed.txt')
+        console.log(decompressedResult)
+    } catch (error) {
+        console.error('Error during compression or decompression:', error)
+    }
+}
+performCompressionAndDecompression()
