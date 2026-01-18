@@ -1,22 +1,25 @@
+let users = [];
+
 exports.getUsers = (req, res) => {
-    res.send('Get users route');
+    res.send(JSON.stringify(users));
 };
 
 exports.createUser = (req, res) => {
-    res.send('Post users route');
+    const { id, name } = req.body;
+    users.push({ id, name });
+    res.send(`Users created: ${name}`);
 };
 
 exports.getUserById = (req, res) => {
-    const { userId } = req.params;
-    res.send(`Get user by Id route: ${userId}`);
+    const user = users.find(u => u.id == req.params.userId);
+    if (!user) return res.send('User not found');
+    res.send(JSON.stringify(user));
 };
 
 exports.updateUser = (req, res) => {
-    const { userId } = req.params;
-    res.send(`Put user by Id route: ${userId}`);
+    res.send(`Put user by Id route: ${req.params.userId}`);
 };
 
 exports.deleteUser = (req, res) => {
-    const { userId } = req.params;
-    res.send(`Delete user by Id route: ${userId}`);
+    res.send(`Delete user by Id route: ${req.params.userId}`);
 };
