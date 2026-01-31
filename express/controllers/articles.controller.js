@@ -1,22 +1,15 @@
-exports.getArticles = (req, res) => {
-    res.send('Get articles route');
-};
+const articles = [
+    { id: 1, title: 'Express.js', content: 'Express basics' },
+    { id: 2, title: 'Template engines', content: 'PUG & EJS' },
+];
 
-exports.createArticle = (req, res) => {
-    res.send('Post articles route');
+exports.getArticles = (req, res) => {
+    res.render('articles/list.ejs', { articles });
 };
 
 exports.getArticleById = (req, res) => {
-    const { articleId } = req.params;
-    res.send(`Get article by Id route: ${articleId}`);
-};
+    const article = articles.find(a => a.id === Number(req.params.articleId));
+    if (!article) return res.status(404).send('Article not found');
 
-exports.updateArticle = (req, res) => {
-    const { articleId } = req.params;
-    res.send(`Put article by Id route: ${articleId}`);
-};
-
-exports.deleteArticle = (req, res) => {
-    const { articleId } = req.params;
-    res.send(`Delete article by Id route: ${articleId}`);
+    res.render('articles/detail.ejs', { article });
 };
