@@ -1,0 +1,18 @@
+.sidebar {
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #ffe4ec;
+    color: #e75480;
+}

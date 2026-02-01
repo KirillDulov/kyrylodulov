@@ -1,0 +1,11 @@
+.featured h2 {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.featured .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
