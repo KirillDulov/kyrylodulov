@@ -1,37 +1,58 @@
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
+const { getDB } = require('../config/db');
+const { ObjectId } = require('mongodb');
 
-// ⚠️ для прикладу — без БД
-const users = [];
+const collection = () => getDB().collection('test');
 
-exports.register = async (req, res) => {
-    const { email, password } = req.body;
-
-    const hash = await bcrypt.hash(password, 10);
-    users.push({ id: users.length + 1, email, password: hash });
-
-    res.status(201).json({ message: 'Registered' });
+exports.insertOne = async (req, res) => {
+    const result = await collection().insertOne(req.body);
+    res.json(result);
 };
 
-exports.login = async (req, res) => {
-    const { email, password } = req.body;
+exports.insertMany = async (req, res) => {
+    const result = await collection().insertMany(req.body);
+    res.json(result);
+};
 
-    const user = users.find(u => u.email === email);
-    if (!user) return res.status(401).json({ message: 'Invalid credentials' });
+exports.find = async (req, res) => {
+    const users = await collection()
+        .find({}, { projection: { name: 1, email: 1 } })
+        .toArray();
 
-    const ok = await bcrypt.compare(password, user.password);
-    if (!ok) return res.status(401).json({ message: 'Invalid credentials' });
+    res.json(users);
+};
 
-    const token = jwt.sign(
-        { userId: user.id },
-        process.env.JWT_SECRET,
-        { expiresIn: '1h' }
+exports.updateOne = async (req, res) => {
+    const result = await collection().updateOne(
+        { _id: new ObjectId(req.params.id) },
+        { $set: req.body }
     );
+    res.json(result);
+};
 
-    res.cookie('token', token, {
-        httpOnly: true,
-        sameSite: 'strict',
+exports.updateMany = async (req, res) => {
+    const result = await collection().updateMany(
+        req.body.filter,
+        { $set: req.body.update }
+    );
+    res.json(result);
+};
+
+exports.replaceOne = async (req, res) => {
+    const result = await collection().replaceOne(
+        { _id: new ObjectId(req.params.id) },
+        req.body
+    );
+    res.json(result);
+};
+
+exports.deleteOne = async (req, res) => {
+    const result = await collection().deleteOne({
+        _id: new ObjectId(req.params.id)
     });
+    res.json(result);
+};
 
-    res.json({ message: 'Logged in' });
+exports.deleteMany = async (req, res) => {
+    const result = await collection().deleteMany(req.body);
+    res.json(result);
 };

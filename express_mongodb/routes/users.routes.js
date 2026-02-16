@@ -1,25 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const controller = require('../controllers/user.controller');
 
-router.get('/', (req, res) => {
-    res.send('Get users route');
-});
+router.post('/', controller.insertOne);
+router.post('/many', controller.insertMany);
 
-router.post('/theme', (req, res) => {
-    const { theme } = req.body;
+router.get('/', controller.find);
 
-    if (!theme || !['light', 'dark'].includes(theme)) {
-        return res.status(400).json({ message: 'Invalid theme value. Accepted values: "light" or "dark".' });
-    }
+router.patch('/:id', controller.updateOne);
+router.patch('/', controller.updateMany);
+router.put('/:id', controller.replaceOne);
 
-    res.cookie('theme', theme, {
-        maxAge: 1000 * 60 * 60 * 24 * 30,
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict'
-    });
-
-    res.json({ message: `Theme '${theme}' saved successfully.` });
-});
+router.delete('/:id', controller.deleteOne);
+router.delete('/', controller.deleteMany);
 
 module.exports = router;

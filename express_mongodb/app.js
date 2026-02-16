@@ -3,24 +3,19 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
-const { MongoClient } = require('mongodb');
+const { connectDB, getDB } = require('./config/db');
 
 const authRoutes = require('./routes/auth.routes');
+const userRoutes = require('./routes/users.routes');
 const protectedRoutes = require('./routes/protected.routes');
 
 const app = express();
 const PORT = 3000;
 
-const uri = process.env.MONGO_URI;
-const client = new MongoClient(uri);
-let db;
-
 async function startServer() {
     try {
-        await client.connect();
+        await connectDB();
         console.log('Підключено до MongoDB');
-
-        db = client.db('MyBD');
 
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }));
@@ -43,6 +38,7 @@ async function startServer() {
 
         app.get('/users', async (req, res) => {
             try {
+                const db = getDB();
                 const documents = await db.collection('test').find({}).toArray();
 
                 let html = `
@@ -57,6 +53,8 @@ async function startServer() {
                 res.status(500).send(`Внутрішня помилка сервера: ${err.message}`);
             }
         });
+
+        app.use('/users', userRoutes);
 
         app.listen(PORT, () => console.log(`Сервер запущенно на порт: ${PORT}`));
 
