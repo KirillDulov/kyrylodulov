@@ -1,59 +1,52 @@
 require('dotenv').config();
 const express = require('express');
-const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const passport = require('passport');
-
-require('./config/passport'); 
-
-const { connectDB, getDB } = require('./config/db');
-
-const authRoutes = require('./routes/auth.routes');
-const userRoutes = require('./routes/users.routes');
-const protectedRoutes = require('./routes/protected.routes');
+const passport = require('./config/passport');
+const connectDB = require('./config/db');
+const path = require('path');
 
 const app = express();
-const PORT = 3000;
 
-async function startServer() {
-    try {
-        await connectDB();
-        console.log('Підключено до MongoDB');
+connectDB();
 
-        app.use(express.json());
-        app.use(express.urlencoded({ extended: true }));
-        app.use(cookieParser());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-        app.use(session({
-            secret: process.env.SESSION_SECRET,
-            resave: false,
-            saveUninitialized: false,
-            cookie: {
-                httpOnly: true,
-                secure: false,
-                maxAge: 1000 * 60 * 60
-            }
-        }));
+app.use((req, res, next) => {
+    res.locals.theme = 'light';
+    next();
+});
 
-        app.use(passport.initialize());
-        app.use(passport.session());
+app.use(express.static(path.join(__dirname, 'public')));
 
-        app.use('/auth', authRoutes);
-        app.use('/protected', protectedRoutes);
-        app.use('/users', userRoutes);
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-        app.get('/', (req, res) => {
-            res.send('Hello ehaerh');
-        });
-
-        app.listen(PORT, () => {
-            console.log(`Сервер запущено на порту: ${PORT}`);
-        });
-
-    } catch (err) {
-        console.error('Помилка підключення:', err);
-        process.exit(1);
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'supersecret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        maxAge: 1000 * 60 * 60
     }
-}
+}));
 
-startServer();
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/articles', require('./routes/articles.routes'));
+app.use('/auth', require('./routes/auth.routes'));
+app.use('/users', require('./routes/users.routes'));
+
+app.use((req, res) => {
+    res.status(404).render('errors/404');
+});
+
+app.use(require('./middlewares/error.middleware'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

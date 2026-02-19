@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon --legacy-watch app.js"
+    "dev": "nodemon --legacy-watch app.js",
+    "preinstall": "npx npm-force-resolutions"
   },
   "keywords": [],
   "author": "",
@@ -16,16 +17,24 @@
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
-    "ejs": "^4.0.1",
+    "ejs": "^3.0.2",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.0",
+    "mongoose": "^9.2.1",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pug": "^3.0.3"
   },
+  "resolutions": {
+    "minimatch": "5.1.1"
+  },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "filelist": "^0.0.1",
+    "jake": "^10.5.2",
+    "minimatch": "^10.2.1",
+    "nodemon": "^1.0.2",
+    "npm-force-resolutions": "^0.0.10"
   }
 }

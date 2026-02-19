@@ -1,76 +1,129 @@
-const { getDB } = require('../config/db');
-const { ObjectId } = require('mongodb');
+const Test = require('../models/Test');
 
-const collection = () => getDB().collection('test');
-
-exports.insertOne = async (req, res) => {
-    const result = await collection().insertOne(req.body);
-    res.json(result);
-};
-
-exports.insertMany = async (req, res) => {
-    const result = await collection().insertMany(req.body);
-    res.json(result);
-};
-
-exports.find = async (req, res) => {
-    const users = await collection()
-        .find({}, { projection: { name: 1, email: 1 } })
-        .toArray();
-    res.json(users);
-};
-
-exports.updateOne = async (req, res) => {
-    const result = await collection().updateOne(
-        { _id: new ObjectId(req.params.id) },
-        { $set: req.body }
-    );
-    res.json(result);
-};
-
-exports.updateMany = async (req, res) => {
-    const result = await collection().updateMany(
-        req.body.filter,
-        { $set: req.body.update }
-    );
-    res.json(result);
-};
-
-exports.replaceOne = async (req, res) => {
-    const result = await collection().replaceOne(
-        { _id: new ObjectId(req.params.id) },
-        req.body
-    );
-    res.json(result);
-};
-
-exports.deleteOne = async (req, res) => {
-    const result = await collection().deleteOne({
-        _id: new ObjectId(req.params.id)
-    });
-    res.json(result);
-};
-
-exports.deleteMany = async (req, res) => {
-    const result = await collection().deleteMany(req.body);
-    res.json(result);
-};
-
-exports.findWithCursor = async (req, res) => {
+exports.insertOne = async (req, res, next) => {
     try {
-        const cursor = collection().find({}, { projection: { name: 1, email: 1 } });
-        const users = [];
-        await cursor.forEach(user => users.push(user));
-        res.json(users);
+        const doc = await Test.create(req.body);
+        res.status(201).json(doc);
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Помилка сервера', error: err.message });
+        next(err);
     }
 };
 
-exports.getStats = async (req, res) => {
+exports.insertMany = async (req, res, next) => {
     try {
-        const result = await collection().aggregate([
+        const docs = await Test.insertMany(req.body, { ordered: false });
+        res.status(201).json(docs);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.find = async (req, res, next) => {
+    try {
+        const docs = await Test.find().select('name age');
+        res.json(docs);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.updateOne = async (req, res, next) => {
+    try {
+        const doc = await Test.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+
+        if (!doc) {
+            return res.status(404).json({ message: 'Document not found' });
+        }
+
+        res.json(doc);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.updateMany = async (req, res, next) => {
+    try {
+        const result = await Test.updateMany(
+            req.body.filter,
+            { $set: req.body.update },
+            { runValidators: true }
+        );
+
+        res.json(result);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.replaceOne = async (req, res, next) => {
+    try {
+        const doc = await Test.findOneAndReplace(
+            { _id: req.params.id },
+            req.body,
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+
+        if (!doc) {
+            return res.status(404).json({ message: 'Document not found' });
+        }
+
+        res.json(doc);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.deleteOne = async (req, res, next) => {
+    try {
+        const doc = await Test.findByIdAndDelete(req.params.id);
+
+        if (!doc) {
+            return res.status(404).json({ message: 'Document not found' });
+        }
+
+        res.json({ message: 'Deleted successfully' });
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.deleteMany = async (req, res, next) => {
+    try {
+        const result = await Test.deleteMany(req.body);
+        res.json(result);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.findWithCursor = async (req, res, next) => {
+    try {
+        const cursor = Test.find().select('name age').cursor();
+        const docs = [];
+
+        for (let doc = await cursor.next(); doc != null; doc = await cursor.next()) {
+            docs.push(doc);
+        }
+
+        res.json(docs);
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.getStats = async (req, res, next) => {
+    try {
+        const result = await Test.aggregate([
             {
                 $group: {
                     _id: null,
@@ -87,11 +140,10 @@ exports.getStats = async (req, res) => {
                     uniqueNamesCount: { $size: "$uniqueNames" }
                 }
             }
-        ]).toArray();
+        ]);
 
-        res.json(result[0]);
+        res.json(result[0] || {});
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Помилка сервера', error: err.message });
+        next(err);
     }
 };

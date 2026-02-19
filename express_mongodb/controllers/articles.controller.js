@@ -1,15 +1,37 @@
-const articles = [
-    { id: 1, title: 'Express.js', content: 'Express basics' },
-    { id: 2, title: 'Template engines', content: 'PUG & EJS' },
-];
+import mongoose from 'mongoose';
+import Article from '../models/Article.js';
 
-exports.getArticles = (req, res) => {
-    res.render('articles/list.ejs', { articles });
+export const getArticles = async (req, res, next) => {
+    try {
+        const articles = await Article
+            .find()
+            .sort({ createdAt: -1 })
+            .lean();
+
+        res.render('articles/list', { articles });
+    } catch (err) {
+        next(err);
+    }
 };
 
-exports.getArticleById = (req, res) => {
-    const article = articles.find(a => a.id === Number(req.params.articleId));
-    if (!article) return res.status(404).send('Article not found');
+export const getArticleById = async (req, res, next) => {
+    try {
+        const { articleId } = req.params;
 
-    res.render('articles/detail.ejs', { article });
+        if (!mongoose.Types.ObjectId.isValid(articleId)) {
+            return res.status(400).render('errors/400');
+        }
+
+        const article = await Article
+            .findById(articleId)
+            .lean();
+
+        if (!article) {
+            return res.status(404).render('errors/404');
+        }
+
+        res.render('articles/detail', { article });
+    } catch (err) {
+        next(err);
+    }
 };
