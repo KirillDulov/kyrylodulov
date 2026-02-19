@@ -3,6 +3,9 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+
+require('./config/passport'); 
+
 const { connectDB, getDB } = require('./config/db');
 
 const authRoutes = require('./routes/auth.routes');
@@ -22,10 +25,14 @@ async function startServer() {
         app.use(cookieParser());
 
         app.use(session({
-            secret: 'SECRET_KEY',
+            secret: process.env.SESSION_SECRET,
             resave: false,
             saveUninitialized: false,
-            cookie: { httpOnly: true, secure: false, maxAge: 1000 * 60 * 60 }
+            cookie: {
+                httpOnly: true,
+                secure: false,
+                maxAge: 1000 * 60 * 60
+            }
         }));
 
         app.use(passport.initialize());
@@ -33,30 +40,15 @@ async function startServer() {
 
         app.use('/auth', authRoutes);
         app.use('/protected', protectedRoutes);
-
-        app.get('/', (req, res) => res.send('Сервер запущенно'));
-
-        app.get('/users', async (req, res) => {
-            try {
-                const db = getDB();
-                const documents = await db.collection('test').find({}).toArray();
-
-                let html = `
-                    <h1>Documents in 'test' collection</h1>
-                    <ul>
-                        ${documents.map(d => `<li>${JSON.stringify(d)}</li>`).join('')}
-                    </ul>
-                `;
-                res.send(html);
-            } catch (err) {
-                console.error(err);
-                res.status(500).send(`Внутрішня помилка сервера: ${err.message}`);
-            }
-        });
-
         app.use('/users', userRoutes);
 
-        app.listen(PORT, () => console.log(`Сервер запущенно на порт: ${PORT}`));
+        app.get('/', (req, res) => {
+            res.send('Hello ehaerh');
+        });
+
+        app.listen(PORT, () => {
+            console.log(`Сервер запущено на порту: ${PORT}`);
+        });
 
     } catch (err) {
         console.error('Помилка підключення:', err);
