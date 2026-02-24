@@ -32,3 +32,9 @@
 .cart-btn.secondary:hover {
   background-color: #ffc9dd;
 }
+
+
+
+.cart-item button:hover {
+  background-color: #f2558b;
+}

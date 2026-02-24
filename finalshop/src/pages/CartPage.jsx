@@ -1,25 +1,36 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from '../features/cart/cartSlice';
+import ProductCard from '../components/ProductCard';
 import './CartPage.css';
 
 export default function CartPage() {
-  const { items, totalPrice } = useSelector(state => state.cart);
   const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart.items);
+
+  const handleRemoveFromCart = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   return (
-    <div className="cart-container">
-      <h2>Кошик</h2>
-      {items.length === 0 && <p>Кошик порожній</p>}
-      {items.map(item => (
-        <div key={item.id} className="cart-item">
-          <span>{item.title} x {item.quantity}</span>
-          <span>{item.price * item.quantity} грн</span>
-          <button onClick={() => dispatch(removeFromCart(item.id))}>
-            Видалити
-          </button>
+    <div className="cart-page">
+      <h2>Ваш кошик</h2>
+      {cartItems.length === 0 ? (
+        <p>У вас немає товарів у кошику.</p>
+      ) : (
+        <div className="cart-list">
+          {cartItems.map((product) => (
+            <div key={product.id}>
+              <ProductCard product={product} />
+              <button
+                onClick={() => handleRemoveFromCart(product.id || product._id)}
+                style={{ backgroundColor: "#ff4d4d" }}
+              >
+                Видалити з кошика
+              </button>
+            </div>
+          ))}
         </div>
-      ))}
-      {items.length > 0 && <h3>Разом: {totalPrice} грн</h3>}
+      )}
     </div>
   );
 }

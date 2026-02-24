@@ -17,11 +17,11 @@ export default function AuthModal({ onClose }) {
 
     return (
         <div className="modal">
-            <h2>Вход</h2>
+            <h2>Вхід</h2>
             <form onSubmit={handleSubmit}>
                 <input name="email" placeholder="Email" required />
                 <input type="password" placeholder="Пароль" required />
-                <button type="submit">Войти</button>
+                <button type="submit">Увійти</button>
             </form>
         </div>
     );

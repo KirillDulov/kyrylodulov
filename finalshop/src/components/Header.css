@@ -26,3 +26,43 @@ header {
 .cart:hover {
   background-color: #e91e63;
 }
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.header__icon {
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.header__icon:hover {
+  color: #e91e63;
+  /* Пурпурний при ховері */
+}
+
+.header__language select,
+.header__currency select {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff4081;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Між іконкою та текстом */
+  font-size: 24px;
+  color: black;
+  margin-left: 20px;
+}
